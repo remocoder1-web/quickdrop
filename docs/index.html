@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>QuickDrop — Share Files Instantly</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="brand" href="./">QuickDrop<span>.</span></a>
+      <span class="status"><span class="dot"></span> No account needed</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">FAST. PRIVATE. SIMPLE.</p>
+      <h1>Send files.<br><span>Not your details.</span></h1>
+      <p class="subtitle">
+        Transfer files between your phone, laptop, or any device
+        using a simple six-digit code.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="tabs">
+        <button class="tab active" id="sendTab" type="button">Send a file</button>
+        <button class="tab" id="receiveTab" type="button">Receive a file</button>
+      </div>
+
+      <section id="sendPanel">
+        <label class="dropzone" id="dropzone" for="fileInput">
+          <span class="upload-icon">↑</span>
+          <strong>Choose a file to send</strong>
+          <span>Click here to browse your device</span>
+          <span class="file-limit">Maximum file size: 100 MB</span>
+          <input id="fileInput" type="file" hidden>
+        </label>
+
+        <div id="selectedFile" class="selected-file" hidden></div>
+        <button id="sendButton" class="primary-button" type="button" disabled>
+          Generate sharing code
+        </button>
+        <div id="sendResult" class="result" aria-live="polite"></div>
+      </section>
+
+      <section id="receivePanel" hidden>
+        <label class="field-label" for="codeInput">Enter the 6-digit code</label>
+        <input
+          id="codeInput"
+          class="code-input"
+          type="text"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          maxlength="6"
+          pattern="[0-9]{6}"
+          placeholder="000000"
+        >
+        <button id="receiveButton" class="primary-button" type="button">
+          Find my file
+        </button>
+        <div id="receiveResult" class="result" aria-live="polite"></div>
+      </section>
+
+      <p class="expiry-note">Sharing codes expire after 10 minutes.</p>
+    </section>
+
+    <section class="features">
+      <article>
+        <span class="feature-icon">↗</span>
+        <h2>Quick transfer</h2>
+        <p>Share using a short code instead of an account.</p>
+      </article>
+      <article>
+        <span class="feature-icon">⌁</span>
+        <h2>Cross-device</h2>
+        <p>Send from a phone and receive on a computer.</p>
+      </article>
+      <article>
+        <span class="feature-icon">◷</span>
+        <h2>Temporary access</h2>
+        <p>Codes expire after ten minutes.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>QuickDrop · Simple file sharing</p>
+      <p>Only share codes with people you trust.</p>
+    </footer>
+  </main>
+</body>
+</html>
