@@ -1,5 +1,5 @@
 
-const API_BASE = "https://YOUR-BACKEND.onrender.com";
+const API_BASE = "https://quickdrop-api-9k3g.onrender.com";
 
 const fileInput = document.getElementById("fileInput");
 const dropzone = document.getElementById("dropzone");
